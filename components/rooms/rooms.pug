@@ -1,0 +1,30 @@
+mixin room__block( data ) 
+  .Wrapper__first_room.wrapper__room
+    a(href='../../pages/room-info/room-info.html')
+      .room__photo(class=data.photo)
+        .preview-photo
+        .next-photo
+        .all-photo
+          span.first-all-photo
+          span.second-all-photo
+          span.third-all-photo
+          span.fourth-all-photo
+      .bottom-card
+        .room__container
+          .top-room 
+            p.lux_text
+              span.room-number=data.number
+              span.lux=data.lux
+            p.desc-text 
+              span.price_text=data.price
+              span  в сутки
+          .bottom-room   
+            .room-stars
+              i(class="material-icons star")=data.stars
+              i(class="material-icons star")=data.stars
+              i(class="material-icons star")=data.stars3
+              i(class="material-icons star")=data.stars4
+              i(class="material-icons star")=data.stars5
+            p.desc-text 
+              span.price_text=data.reviews
+              span  Отзывов  

@@ -1,0 +1,5 @@
+mixin checkbox(data) 
+  label.checkbox__label(for = 'checkbox')= data.text
+    input.checkbox__input(type='checkbox', name='checkbox', id='checkbox')
+    span.checkbox__square
+    script(src='../../components/checkbox/checkbox.js')

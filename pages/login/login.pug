@@ -1,0 +1,21 @@
+doctype html
+html(lang='ru')
+  head
+    include ../../theme/head.pug
+    +head({styles: 'login.css', script: '../../components/header/header.js'})
+  body
+    include ../../components/login-button/button-blue.pug
+    include ../../components//header/header.html
+    section.wrapper.wrapper__image
+      .regform
+        .regform__content
+          h1 Войти
+          form
+            input(type='email' name='email' id='email' placeholder='Email' class='regform-email')
+            input(type='password' name='pass' id='pass' placeholder='Пароль' class='regform-password')
+            .regform__button
+                +blue-button({ link: '../index/index.html', text: 'Войти'})(class='panel__button')
+            .regform__login
+              p Нет аккаунта на Toxin?
+              a.index__login-button(href='../registration/registration.html') Создать  
+    include ../../components/footer/footer.html

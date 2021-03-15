@@ -1,0 +1,21 @@
+.unit {
+  fill: none;
+  stroke-width: 2s;
+}
+
+.unit:nth-child(1) {
+  stroke: #6FCF97;
+  stroke-dasharray: 15 100;
+}
+
+.unit:nth-child(2) {
+  stroke: #BC9CFF;
+  stroke-dasharray: 15 100;
+  stroke-dashoffset: -47;
+}
+
+.unit:nth-child(3) {
+  stroke: #FFE39C;
+  stroke-dasharray: 30 100;
+  stroke-dashoffset: -16;
+}

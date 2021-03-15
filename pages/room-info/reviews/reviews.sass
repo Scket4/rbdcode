@@ -1,0 +1,59 @@
+@import '../../theme/variables.sass'
+.reviews
+  margin-bottom: 22px
+  margin-bottom: 6px
+
+.review__author
+  display: inline-block
+  margin-left: 5px
+  vertical-align: top
+
+.review__text
+  display: flex
+  margin-top: 10px
+
+.like-button
+  width: 40px
+  height: 20px
+  border-radius: 10px
+  border: 1px solid $purple
+  display: flex
+  flex: 0 0 40px
+  margin-right: 17px
+  position: relative
+  top: 2px
+  left: 1px
+  &::before
+    content: 'favorite'
+    font-family: 'Material Icons'
+    position: absolute
+    font-size: 10px
+    color: $purple
+    top: 4px
+    left: 5px
+  &::after
+    content: '12'
+    font-size: 10px
+    line-height: 12px
+    text-align: center
+    position: absolute
+    color: $purple
+    top: 3px
+    left: 20px
+
+.like-button--deactive
+  border: 1px solid $dark-25
+  &::before
+    color: $dark-25
+  &::after
+    color: $dark-25
+    content: '2'
+
+
+.text-style
+  font-size: 14px
+  line-height: 24px
+  color: $dark-75
+
+.text-style--bold
+  font-weight: bold

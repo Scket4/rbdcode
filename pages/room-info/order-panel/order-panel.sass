@@ -1,0 +1,79 @@
+.order-room
+  width: 380px
+  height: 511px
+  border-radius: 4px
+  border: 1px solid rgba(0, 0, 0, 0.12)
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+  display: inline-flex
+  padding: 40px 0 30px 0
+  background-color: white
+
+.order-room__container
+  width: 320px
+  margin: 0 auto
+  & .lux_text,
+  & .desc-text
+    display: inline-block
+  & .desc-text
+    float: right
+    font-size: small
+  & .regform__button
+    margin-top: 20px
+
+.order-room__info
+  margin-bottom: 19px
+  padding-top: 6px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  & .room-number
+    font-size: 24px
+    margin-right: 2px
+
+body .order-room .order-room__container span.arrow_black
+  top: 40px
+
+.order-room__arrive
+  margin-bottom: 38px
+
+.order-room__container .no-bold
+  margin-top: 15px
+  margin-left: -3px
+  margin-right: -2px
+  & td
+    padding-bottom: 8px
+    white-space: nowrap
+    position: relative
+    &:nth-of-type(2)
+      text-align: right
+      vertical-align: top
+  & th
+    padding: 0
+    margin: 0
+    padding-top: 20px
+    &:first-of-type
+      text-align: left
+    &:last-of-type
+      text-align: right
+
+.line-height
+  line-height: 18px
+
+.td_after::after
+  content: ''
+  position: absolute
+  width: 20px
+  height: 20px
+  border-radius: 50%
+  border: 1px solid rgba(31, 32, 65, 0.25)
+  right: -25px
+  top: 0.5px
+.td_after::before
+  content: 'i'
+  position: absolute
+  color: rgba(31, 32, 65, 0.25)
+  font-size: 12px
+  line-height: 14px
+  top: 4px
+  right: -17px
+  transform: rotate(180deg)

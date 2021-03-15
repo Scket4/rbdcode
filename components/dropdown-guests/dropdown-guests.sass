@@ -1,0 +1,132 @@
+.dropdown-guests
+  width: 318px
+  height: 159px
+  border-radius: 4px
+  border: 1px solid $dark-25
+  padding: 7px 5px 15px 12px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  background-color: white
+  box-sizing: border-box
+  position: absolute
+  z-index: 1000
+  font-family: 'Montserrat'
+  transition: 1s all ease
+  
+.dropdown-guests__selection
+  width: 100%
+  height: 104px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+
+.dropdown-guests__adults,
+.dropdown-guests__kids,
+.dropdown-guests__babes
+  height: 30px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-left: 3px
+  padding-right: 2px
+  &--text
+    text-transform: uppercase
+    font-weight: bold
+    color: $dark-100
+    font-size: 12px
+    font-family: 'Montserrat'
+  &--controls
+    width: 90px
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+
+.dropdown-guests__adults--controls-span1,
+.dropdown-guests__kids--controls-span1,
+.dropdown-guests__babes--controls-span1,
+.dropdown-guests__adults--controls-span2,
+.dropdown-guests__kids--controls-span2,
+.dropdown-guests__babes--controls-span2
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  position: relative
+  cursor: pointer
+  
+
+.dropdown-guests__adults--controls-span1,
+.dropdown-guests__kids--controls-span1,
+.dropdown-guests__babes--controls-span1
+  border: 1px solid  $dark-10
+  //border: 1px solid  $dark-25
+  &::before
+    content: ""
+    width: 7px
+    height: 1px
+    background: $dark-10
+    //background: $dark-25
+    position: absolute
+    top: 15px
+    left: 11.5px
+
+.dropdown-guests__adults--controls-span2,
+.dropdown-guests__kids--controls-span2,
+.dropdown-guests__babes--controls-span2
+  //border: 1px solid  $dark-10
+  border: 1px solid  $dark-25
+  &::after
+    content: ''
+    width: 1.5px
+    height: 7px
+    background: $dark-25
+    //background: $dark-10
+    position: absolute
+    top: 12px
+    left: 14.5px
+    z-index: 2
+  &::before
+    content: ""
+    width: 7px
+    height: 1px
+    background: $dark-25
+    //background: $dark-10
+    position: absolute
+    top: 15px
+    left: 11.5px
+
+
+.dropdown-guests__buttons
+  width: 100%
+  height: 11px
+  display: flex
+  justify-content: space-between
+  cursor: pointer
+
+.dropdown-guests__clear,
+.dropdown-guests__apply 
+  display: block
+  text-transform: uppercase
+  font-size: 12px
+  font-weight: bold
+  font-family: 'Montserrat'
+
+.dropdown-guests__apply
+  color: #BC9CFF
+  
+.dropdown-guests__clear
+  color: $dark-50
+  visibility: hidden
+
+.dropdown-guests__clear--visible
+  visibility: visible
+
+.controls-span-active
+  border: 1px solid  $dark-25
+  &::before
+    background: $dark-25
+
+    

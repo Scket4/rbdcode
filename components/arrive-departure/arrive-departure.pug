@@ -1,0 +1,8 @@
+mixin arrive-departure( data )
+  .arrive-departure(class !=attributes.class)
+    label(for='arrive' class='label-arrive-departure') Прибытие 
+      input(type='text' name='arrive' autocomplete="off" placeholder=data.arrive class='datepicker-here arrive' data-range="true" data-multiple-dates-separator=" - " id='arrive')
+      .arrow_black
+    label(for='departure' class='label-arrive-departure') Выезд
+      input(type='text' name='departure' placeholder=data.departure class='departure' id='departure' data-range="true" data-multiple-dates-separator=" - ")
+      .arrow_black

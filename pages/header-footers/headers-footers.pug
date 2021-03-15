@@ -1,0 +1,16 @@
+doctype html
+html(lang = 'ru')
+  head
+    include ../../theme/head.pug
+    +head({styles:'header-footers.css', title: 'Шапки и подвалы', script: '../../components/header/header.js'})
+  body 
+    .wrapper.headers-footers__wrapper
+      img.headers-footers__img(src='../../theme/img/logo.png')
+      .headers-footers__header
+        include ../../components//header/header.html
+      .headers-footers__header--login
+        include header-login/header-login.html
+      .headers-footers__footer
+        include ../../components/footer/footer.html
+      .headers-footers__footer--mobile
+        include footer-mobile/footer-mobile.html

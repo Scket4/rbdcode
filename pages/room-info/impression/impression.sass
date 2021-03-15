@@ -1,0 +1,83 @@
+@import '../../theme/variables.sass'
+.impression
+  width: 311px
+
+.impression__flex-container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 20px
+  position: relative
+
+.impression__title
+  font-family: 'Quicksand', sans-serif
+  font-weight: bold
+  font-size: 19px
+  color: $dark-100
+
+.impression__diagram
+  display: inline-flex
+  height: 121px
+  width: 121px
+  border-radius: 50%
+  border: 4px solid #66D2EA
+  justify-content: center
+  align-items: center
+  text-align: center
+  margin-right: 30px
+
+
+.diagram-description
+  display: inline-block
+  margin-top: 26px
+
+
+.list-text
+  list-style: none
+  & .list
+    position: relative
+    font-size: 14px
+    line-height: 24px
+    color: $dark-75
+  & .list::before
+    content: ''
+    width: 10px
+    height: 10px
+    position: absolute
+    border-radius: 50%
+    background-color: black
+    left: -15px
+    top: 8px
+  & .first-list::before
+    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%)
+  & .second-list::before
+    background: $green-gradient
+  & .third-list::before
+    background: $purple-gradient
+  & .fourth-list::before
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%)
+
+.number
+  font-family: 'Quicksand', sans-serif
+  font-weight: bold
+  font-size: 24px
+  line-height: 30px
+  color: $purple
+
+.votes
+  font-size: 12px
+  font-weight: bold
+  line-height: 15px
+  text-align: center
+  text-transform: uppercase
+  color: $purple
+
+.inside-text
+  display: flex
+  position: absolute
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  width: 50px
+  left: 33px
+  top: 37px

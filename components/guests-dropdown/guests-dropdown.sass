@@ -1,0 +1,68 @@
+@import '../../theme/variables.sass'
+.guests-dropdown
+  padding: 0
+  margin: 0
+  width: 320px
+  height: 159px
+  position: absolute
+  border: 1px solid $dark-50
+  box-shadow: 0px 10px 20px $dark-5
+  background: white
+  z-index: 100
+  transition: all .4s
+  display: block
+  &__container
+    padding: 0
+    margin: 0
+    padding: 9px 7px 13px 12px
+  & .clear, .apply
+    background: none
+    border: none
+    font-weight: bold
+    font-size: 12px
+    text-transform: uppercase
+    cursor: pointer
+    position: absolute
+  & .clear
+    margin: 0
+    padding: 0
+    color: $dark-50
+    left: 15px
+    bottom: 13px
+  & .apply
+    color: $purple
+    margin: 0
+    padding: 0
+    bottom: 13px
+    right: 7px
+  & table
+    width: 100%
+    & td
+      padding-bottom: 19px
+      font-weight: bold
+      font-size: 12px
+      text-transform: uppercase
+      color: $dark-100
+    & .numeral
+      padding-right: 6px
+      position: relative
+      &::before, &::after
+       content: ''
+       position: absolute
+       width: 30px
+       height: 30px
+       color: $dark-50
+       border-radius: 50%
+       border: 1px solid $dark-25
+       top: -6px
+       display: flex
+       justify-content: center
+       align-items: center
+       font-size: 18px
+       cursor: pointer
+      &::before
+        content: '-'
+        left: -43px
+      &::after
+        content: '+'
+        right: -4px

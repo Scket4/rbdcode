@@ -1,0 +1,161 @@
+@import '../../components/arrive-departure/arive-departure.sass'
+@import '../../components/guests/guests.sass'
+@import '../../components/login-button/button-blue.sass'
+@import '../../theme/template.sass'
+@import '../../components/header/header.sass'
+@import '../../components/footer/footer.sass'
+@import '../../theme/fonts/fonts.css'
+@import '../../components/guests-dropdown/guests-dropdown.sass'
+@import 'information-about-room/info-about-room.sass'
+@import 'impression/impression.sass'
+@import 'reviews/reviews.sass'
+@import 'order-panel/order-panel.sass'
+@import 'impression/wheel/wheel.sass'
+
+.heading
+  font-family: 'Quicksand', sans-serif
+  font-weight: bold
+  font-size: 19px
+  line-height: 24px
+  color: $dark-100
+
+.room-info__guests-dropdown
+  display: none
+
+.room-info__guest
+  margin-top: 60px
+
+.hotel-room
+  min-height: 1424px
+  width: 100%
+  & .container
+    padding: 70px 20px 0px 20px
+    display: flex
+    justify-content: space-between
+
+.hotel-room__photo
+  height: 485px
+  width: 100%
+  font-size: 0px
+
+.info-about-room-container
+  margin-right: 30px
+
+.hotel-room__photo-1
+  height: 100%
+  width: 981px
+  background: url('img/hotel-room__photo-1.jpg')
+  display: inline-block
+
+.hotel-room__photo-2-3
+  display: inline-block
+
+.hotel-room__photo-2,
+.hotel-room__photo-3
+  width: 459px
+  height: 243px
+
+.hotel-room__photo-2
+  background: url('img/hotel-room__photo-2.jpg')
+
+.hotel-room__photo-3
+  background: url('img/hotel-room__photo-3.jpg')
+
+.about-room
+  max-width: 712px
+  display: flex
+  flex-direction: column
+
+.about-room-top
+  display: flex
+  justify-content: flex-start
+  margin-bottom: 15px
+
+.price_text
+  font-weight: bold
+  font-size: 14px
+  line-height: 18px
+  color: $dark-50
+
+.h2
+  font-weight: bold
+  font-size: 14px
+  line-height: 24px
+  color: $dark-75
+
+body .no-bold
+  font-weight: normal
+
+.about-room__rools .heading,
+.about-room__cancel .heading
+  margin-bottom: 18px
+  margin-top: 33px
+
+.list-rules
+  list-style: none
+  & li
+    position: relative
+    margin-bottom: 10px
+    &::before
+      content: ''
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: $dark-25
+      position: absolute
+      top: 8px
+      left: -20px
+
+.about-room__rools
+  width: 271px
+  margin-right: 90px
+  padding-left: 19px
+
+.about-room__cancel
+  width: 341px
+
+@media (max-width: 1447px)
+  .hotel-room__photo-2-3
+    display: none
+  .hotel-room__photo
+    display: flex
+    justify-content: center
+  .hotel-room__photo-1
+    background-size: cover
+    background-position: 50% 50%
+  .hotel-room .container
+    flex-wrap: wrap
+    justify-content: center
+  .about-room
+    margin-bottom: 80px
+    flex-wrap: wrap
+  .order-room
+    margin-bottom: 50px
+  .about-room-top
+    flex-wrap: wrap
+    justify-content: center
+  .info-about-room-container
+    margin: 0
+    margin-bottom: 30px
+    margin-right: 30px
+  .about-room__rating
+    margin-bottom: 40px
+  .about-room__reviews
+    display: flex
+    flex-direction: column
+    align-items: center
+  .about-room__rools
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0
+    margin-bottom: 10px
+  .about-room__cancel
+    display: flex
+    flex-direction: column
+    align-items: center
+  .heading
+    text-align: center
+
+.about-room__reviews-margin
+  margin-top: 20px

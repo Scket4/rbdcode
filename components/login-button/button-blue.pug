@@ -1,0 +1,6 @@
+mixin blue-button( data )
+  a.a-button(href=data.link)  
+    .button(class !=attributes.class)
+      input(type='button' name='button' class='button__input' value=data.text) 
+      .arrow-white
+        .arrow-white__span

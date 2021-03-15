@@ -1,0 +1,131 @@
+@import '../../theme/variables.sass'
+
+.room__photo
+  display: flex
+  justify-content: space-between
+  background: url('../../components/rooms/img/1.jpg') no-repeat
+  background-size: cover
+  height: 151px
+  width: 100%
+  position: relative
+
+.preview-photo,
+.next-photo
+  flex: 0 0 42px
+  position: relative
+  cursor: pointer
+  &::before
+    content: ''
+    width: 8px
+    height: 2px
+    background-color: white
+    position: absolute
+    transform: rotate(35deg)
+    top: 50.3%
+    left: 40%
+  &::after
+    content: ''
+    width: 8px
+    height: 2px
+    background-color: white
+    position: absolute
+    transform: rotate(-35deg)
+    top: 48%
+    left: 40%
+
+.next-photo
+  &::after
+    transform: rotate(35deg)
+  &::before
+    transform: rotate(-35deg)
+
+
+.all-photo
+  position: absolute
+  bottom: 9%
+  right: 6%
+  width: 41.25px
+  height: 7.49px
+  display: flex
+  justify-content: space-between
+
+.first-all-photo,
+.second-all-photo,
+.third-all-photo,
+.fourth-all-photo
+  cursor: pointer
+  width: 7.5px
+  height: 7.49px
+  border-radius: 50%
+  border: 1px solid #fff
+  box-shadow: 0px 5px 5px $dark-25
+
+.first-all-photo
+  border: none
+  background-color: white
+
+.bottom-card
+  height: 106px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: white
+
+.room__container
+  width: 233px
+  height: 67px
+  margin: 0 auto
+
+.top-room
+  height: 33.5px
+  border-bottom: 1px solid $dark-10
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+.bottom-room
+  height: 33.5px
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+
+.price_text
+  font-weight: bold
+  font-size: 14px
+  line-height: 18px
+  color: $dark-50
+
+.room-number
+  font-family: 'Quicksand', sans-serif
+  font-weight: bold
+  font-size: 20px
+  line-height: 17px
+  color: $dark-100
+.room-stars
+  width: 120px
+  height: 24px
+  & .star
+    color: $purple
+
+.Photo_2
+  background-image: url('../../components/rooms/img/2.jpg')
+.Photo_3
+  background-image: url('../../components/rooms/img/3.jpg')
+.Photo_4
+  background-image: url('../../components/rooms/img/4.png')
+.Photo_5
+  background-image: url('../../components/rooms/img/5.png')
+.Photo_6
+  background-image: url('../../components/rooms/img/6.jpg')
+.Photo_7
+  background-image: url('../../components/rooms/img/7.jpg')
+.Photo_8
+  background-image: url('../../components/rooms/img/8.jpg')
+.Photo_9
+  background-image: url('../../components/rooms/img/9.jpg')
+.Photo_10
+  background-image: url('../../components/rooms/img/10.jpg')
+.Photo_11
+  background-image: url('../../components/rooms/img/11.jpg')
+.Photo_12
+  background-image: url('../../components/rooms/img/12.jpg')

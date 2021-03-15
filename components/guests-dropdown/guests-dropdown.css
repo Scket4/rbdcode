@@ -1,0 +1,78 @@
+.guests-dropdown {
+  padding: 0;
+  margin: 0;
+  width: 320px;
+  height: 159px;
+  position: absolute;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  background: white;
+  z-index: 100;
+  transition: all 1s ease 1s;
+  display: block;
+}
+.guests-dropdown__container {
+  padding: 0;
+  margin: 0;
+  padding: 9px 7px 13px 12px;
+}
+.guests-dropdown .clear, .guests-dropdown .apply {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: absolute;
+}
+.guests-dropdown .clear {
+  margin: 0;
+  padding: 0;
+  color: rgba(31, 32, 65, 0.5);
+  left: 15px;
+  bottom: 13px;
+}
+.guests-dropdown .apply {
+  color: #bc9cff;
+  margin: 0;
+  padding: 0;
+  bottom: 13px;
+  right: 7px;
+}
+.guests-dropdown table {
+  width: 100%;
+}
+.guests-dropdown table td {
+  padding-bottom: 19px;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+.guests-dropdown table .numeral {
+  padding-right: 6px;
+  position: relative;
+}
+.guests-dropdown table .numeral::before, .guests-dropdown table .numeral::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  color: rgba(31, 32, 65, 0.5);
+  border-radius: 50%;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  top: -6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+.guests-dropdown table .numeral::before {
+  content: "-";
+  left: -43px;
+}
+.guests-dropdown table .numeral::after {
+  content: "+";
+  right: -4px;
+}

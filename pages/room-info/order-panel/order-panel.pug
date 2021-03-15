@@ -1,0 +1,25 @@
+mixin order-panel
+  .order-room
+    .order-room__container 
+      .order-room__info
+        p.lux_text №  <span class='room-number heading'>888</span> <span class='lux'>ЛЮКС<span>
+        p.desc-text <span class='price_text'>9 990Р</span> в сутки
+      .order-room__arrive  
+        +arrive-departure({ arrive: '19.08.2019', departure: '23.08.2019'})(class='panel__arrive-departure')
+      +guests({ placeholder: '3 гостя', name: 'Гости'})(class='room-info__guest')
+      +guests-dropdown({ first: 'Взрослые', firstnumber: '2', second: 'Дети', secondnumber: '1', third: 'Младенцы', thirdnumber: '0'})(class='room-info__guests-dropdown')
+      table.h2.no-bold
+        tr
+          td 9 990₽ х 4 суток
+          td 39 960₽
+        tr
+          td.td_after Сбор за услуги: скидка 2 179₽
+          td 0₽
+        tr
+          td.line-height.td_after Сбор за дополнительные<br> услуги
+          td 300₽
+        tr
+          th.heading Итого
+          th.heading 38 081₽
+      .regform__button
+        +blue-button({ link: '../registration/registration.html', text: 'Забронировать'})(class='panel__button') 

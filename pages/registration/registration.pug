@@ -1,0 +1,34 @@
+doctype html
+html(lang='ru')
+  head
+    include ../../theme/head.pug
+    +head({styles: 'registration.css', script: '../../components/header/header.js', script2: '../../components/checkbox/checkbox.js'})
+  body
+    include ../../components/login-button/button-blue.pug
+    include ../../components/arrive-departure/arrive-departure.pug
+    include ../../components//header/header.html
+    section.wrapper.wrapper__image
+      .regform
+        .regform__content
+          h1 Регистрация аккаунта
+          form
+            input(type='text' name='name' id='name' placeholder='Имя' class='regform-name')
+            input(type='text' name='surname' id='surname' placeholder='Фамилия' class='regform-surname')
+            label.regform__male.actived(for='male') Мужчина
+            input(type='radio' name='male' id='male' class='regform__checkbox')
+            label.regform__female(for='female') Женщина
+            input(type='radio' name='female' id='female' class='regform__checkbox')
+            label(for='birthday' class='label-birthday bold-text') Дата рождения
+            input(type='text' name='birthday' id='birthday' placeholder='ДД.ММ.ГГГГ' class='datepicker-here' )
+            label(class='label-user bold-text') Данные для входа в сервис
+              input(type='email' name='email' id='email' placeholder='Email' class='regform-email')
+              input(type='password' name='pass' id='pass' placeholder='Пароль' class='regform-password')
+            input(type='checkbox' name='spam' id='spam' class='regform-spam')
+            label(for='spam' class='regform-spam-label') Получать спецпредложения
+            .regform__button
+              +blue-button({ link: '../room-info/room-info.html', text: 'Перейти к оплате'})(class='panel__button')
+            .regform__login
+              p Уже есть аккаунт на Toxin
+              a.index__login-button(href='../login/login.html') Войти       
+    include ../../components/footer/footer.html
+    

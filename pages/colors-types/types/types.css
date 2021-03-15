@@ -1,0 +1,19 @@
+.text-block {
+  display: flex;
+}
+
+.h {
+  margin-right: 30px;
+}
+
+.h__color {
+  font-family: Montserrat;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.h-text__color {
+  font-family: Quicksand;
+  font-weight: bold;
+  color: #1F2041;
+}

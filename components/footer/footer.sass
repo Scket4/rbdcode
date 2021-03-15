@@ -1,0 +1,192 @@
+@import '../../theme/template.sass'
+
+.footer .footer__table td
+  font-size: 14px
+  line-height: 17px
+  color: $dark-50
+
+.footer
+  margin: 0 auto
+  height: 443px
+  max-width: 1440px
+
+.footer__top
+  padding-top: 100px
+  padding-bottom: 87px
+  display: flex
+  justify-content: space-between
+
+.footer__info
+  width: 260px
+  height: 132px
+
+.head__svg
+  position: relative
+  height: 40px
+  width: 40px
+  margin-right: 12.5px
+
+.footer__logo
+  display: flex
+  align-items: center
+  flex-shrink: 1
+
+.footer__logo_a
+  display: flex
+  align-items: center
+  flex-shrink: 1
+  margin-bottom: 19px
+
+
+.footer__table tr:nth-child(2n+1) td:last-child, th:last-child
+  padding-right: 0
+  width: 260px
+
+
+.footer__table td, th
+  padding-bottom: 17px
+  padding-right: 66px
+
+
+
+th
+  line-height: 15px
+
+.footer__table
+  text-align: left
+
+.email
+  color: $dark-25
+  padding: 13px 64px 13px 15px
+  position: relative
+  border: none
+  width: 216px
+  border-radius: 4px
+
+.footer__table .form
+  border: 1px solid $dark-25
+  padding-bottom: 0
+  position: relative
+  border-radius: 4px
+
+.form span
+  width: 15px
+  height: 2px
+  position: absolute
+  display: block
+  top: 19px
+  right: 13px
+  background-color: $purple
+
+
+.form span::after
+  content: ''
+  width: 9px
+  height: 2px
+  position: absolute
+  display: block
+  bottom: 4px
+  left: 6px
+  background-color: $purple
+  transform: rotate(45deg)
+
+.form span::before
+  content: ''
+  width: 9px
+  height: 2px
+  position: absolute
+  display: block
+  top: 4px
+  left: 6px
+  background-color: $purple
+  transform: rotate(-45deg)
+
+
+.rowspan
+  line-height: 24px
+  vertical-align: top
+
+.footer .footer__table tr:first-child td:last-child
+  color: $dark-75
+  line-height: 24px
+
+
+.footer__bottom
+  padding-top: 25px
+  padding-bottom: 21px
+
+.border
+  width: 100%
+  height: 1px
+  background-color: $dark-10
+
+.footer__social
+  float: right
+  font-size: 0
+
+.fb, .inst, .tw
+  display: inline-block
+  margin-right: 20px
+  width: 24px
+  height: 24px
+  background: url('../../components/footer/img/social.png') no-repeat
+
+.tw
+  background-position: -14px -15px
+
+.fb
+  background-position: -65.00003051757812px -14px
+
+.inst
+  background-position: -113.00003051757812px -14px
+
+.footer__social .inst
+  margin-right: 0
+
+.footer__copyright
+  float: left
+
+td a
+  color: $dark-50
+
+th a
+  color: $dark-100
+
+@media(max-width:1000px)
+
+  body .footer .footer__top
+    padding-top: 40px
+    display: flex
+    flex-direction: column
+    align-items: center
+    & table
+      display: none
+
+  .footer .footer__info
+    margin: 0 auto
+    margin-bottom: 50px
+    hyphens: auto
+
+  .footer .footer__logo
+    margin: 0 auto
+
+  .footer .footer__description
+    text-align: center
+    margin-top: 30px
+
+  .footer .footer__table td
+    position: absolute
+
+  .footer .footer__top
+    padding-bottom: 10px
+
+  .footer
+    height: auto
+    & .wrapper
+      height: 350px
+    & .footer__bottom
+      display: flex
+      flex-direction: column
+      align-items: center
+    & .footer__copyright
+      margin-bottom: 20px

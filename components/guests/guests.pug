@@ -1,0 +1,4 @@
+mixin guests( data )
+  label(for='guests' class='label-guests' class !=attributes.class)=data.name
+    input(type='text' name='guests' placeholder=data.placeholder class='guests' id='guests')  
+    .arrow_black

@@ -1,0 +1,25 @@
+doctype html
+html(lang='ru') 
+  head
+    include ../../theme/head.pug
+    +head({styles: 'index.css', script: '../../components/header/header.js', title: 'Отель Toxin'})
+  body
+    include ../../components/arrive-departure/arrive-departure.pug
+    include ../../components/guests/guests.pug
+    include ../../components/login-button/button-blue.pug
+    include ../../components/header/header.html
+    .wrapper
+      .index
+        .index__panel
+          .panel-container
+            h1.title Найдём номера под ваши пожелания
+            +arrive-departure({ arrive: 'ДД.ММ.ГГГГ', departure: 'ДД.ММ.ГГГГ'})(class='panel__arrive-departure')
+            +guests({ placeholder: 'Сколько гостей', name: 'Гости' })(class='panel__guest')
+            .index__guests-dropdown
+              include ../../components/dropdown-guests/dropdown-guests.html
+            +blue-button({ link: '../room-selection/selection.html', text: 'Подобрать номер'})(class='panel__button')
+        p.index__text Лучши номера для вашей работы, отдыха и просто вдохновения
+      include ../../components/footer/footer.html
+      script(src='index.js')
+      script(src='../../components/dropdown-guests/dropdown-guests.js')
+      

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+        <meta charset="utf-8">
+        <link href="selection.css" rel="stylesheet">
+        <link href="../../components/air-datepickere/dist/css/datepicker.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="../../components/air-datepickere/dist/js/datepicker.js">   </script>
+        <script src="../../components/header/header.js"></script>
+        <script></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0">
+        <title></title>
+  </head>
+  <body>
+<header class="head"> 
+  <div class="wrapper">
+    <div class="container">
+      <div class="header"><a class="head__logo_a logo" href="../../pages/index/index.html"><img src="../../components/header/img/Logo.svg"/></a>
+        <div class="header__burger"><span> </span></div>
+        <nav class="head__menu">
+          <ul><a href="#">
+              <li>О нас</li></a><a href="#">
+              <li>Услуги</li></a><a href="#">
+              <li>Вакансии</li></a><a href="#">
+              <li>Новости</li></a><a href="#">
+              <li>Соглашения</li></a></ul>
+          <div class="head__login"><a class="head__login-button" href="../../pages/login/login.html">Войти</a><a class="head__register-button" href="../../pages/registration/registration.html">Зарегистрироваться</a></div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="wrapper wrapper__selection">
+      <div class="container">
+        <div class="wrapper__filter"><a class="search-filter" href="#">Условия поиска</a></div>
+        <div class="wrapper__conditions">
+          <label class="label-guests" for="arrive">Даты пребывания в отеле 
+            <input class="datepicker-here" type="text" data-range="true" name="arrive" autocomplete="off" placeholder="19 авг - 23 авг" id="arrive"><span class="arrow_black"></span>
+          </label>
+              <label class="label-guests panel__guest" for="guests">Гости
+                <input class="guests" type="text" name="guests" placeholder="3 гостя, 1 младенец" id="guests">
+                <div class="arrow_black"></div>
+              </label>
+          <div class="index__guests-dropdown">
+<div class="dropdown-guests">
+  <div class="dropdown-guests__selection">
+    <div class="dropdown-guests__adults">
+      <p class="dropdown-guests__adults--text">Взрослые</p>
+      <div class="dropdown-guests__adults--controls"><span class="dropdown-guests__adults--controls-span1"></span>
+        <p class="dropdown-guests__adults--controls-number" id="adultNum"> </p><span class="dropdown-guests__adults--controls-span2"></span>
+      </div>
+    </div>
+    <div class="dropdown-guests__kids">
+      <p class="dropdown-guests__kids--text">Дети</p>
+      <div class="dropdown-guests__kids--controls"><span class="dropdown-guests__kids--controls-span1"></span>
+        <p class="dropdown-guests__kids--controls-number" id="kidsNum"> </p><span class="dropdown-guests__kids--controls-span2"></span>
+      </div>
+    </div>
+    <div class="dropdown-guests__babes">
+      <p class="dropdown-guests__babes--text">Младенцы</p>
+      <div class="dropdown-guests__babes--controls"><span class="dropdown-guests__babes--controls-span1"></span>
+        <p class="dropdown-guests__babes--controls-number" id="babesNum"> </p><span class="dropdown-guests__babes--controls-span2"></span>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown-guests__buttons">
+    <div class="dropdown-guests__clear">Очистить</div>
+    <div class="dropdown-guests__apply">Применить</div>
+  </div>
+</div>
+          </div>
+          <div class="conditions__price-range">
+                <div class="price-range">
+                  <div class="price-range__prices">
+                    <p class="bold__title">Диапазон цены</p>
+                    <p class="desc-text desc-text-price desc-text-price-right">5 000₽ - 10 000₽</p>
+                  </div>
+                  <div class="price-range__range"><span class="prices__selected"></span></div>
+                  <p class="desc-text">Стоимость за сутки пребывания в номере</p>
+                </div>
+          </div>
+          <div class="checkbox-buttons">
+            <h3 class="bold__title">Checkbox buttons</h3>
+                <label class="checkbox__label" for="checkbox">Можно курить
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+                <label class="checkbox__label" for="checkbox">Можно c питомцами
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+                <label class="checkbox__label" for="checkbox">Можно пригласить гостей (до 10 человек)
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+          </div>
+          <div class="availability">
+            <h3 class="bold__title">Доступность</h3>
+                <label class="checkbox__label" for="checkbox">Широкий коридор
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+            <p class="desc-text availability-text">Ширина коридоров в номере<br> не менее 91 см.</p>
+                <label class="checkbox__label" for="checkbox">Помощник для инвалидов
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+            <p class="desc-text availability-text">На 1 этаже вас встретит специалист<br> и проводит до номера</p>
+          </div>
+              <label class="label-guests panel__guest-facilites" for="guests">Удобства номера
+                <input class="guests" type="text" name="guests" placeholder="2 спальни, 2 кровати..." id="guests">
+                <div class="arrow_black"></div>
+              </label>
+              <div class="guests-dropdown wrapper__guests-dropdown-facilities">
+                <div class="guests-dropdown__container">
+                  <table>
+                    <tr>
+                      <td>Спальни</td>
+                      <td class="numeral">2</td>
+                    </tr>
+                    <tr>
+                      <td>Кровати</td>
+                      <td class="numeral">2</td>
+                    </tr>
+                    <tr>
+                      <td>Ванные комнаты</td>
+                      <td class="numeral">0</td>
+                    </tr>
+                  </table>
+                  <button class="clear">Очистить</button>
+                  <button class="apply">Применить</button>
+                </div>
+              </div>
+          <div class="additional-amenities">   
+            <h3 class="bold__title">Дополнительные удобства </h3><span class="arrow_black"> </span>
+                <label class="checkbox__label" for="checkbox">Завтрак
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+                <label class="checkbox__label" for="checkbox">Письменный стол
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+                <label class="checkbox__label" for="checkbox">Стул для кормления
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+                <label class="checkbox__label" for="checkbox">Кроватка
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+                <label class="checkbox__label" for="checkbox">Телевизор
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+                <label class="checkbox__label" for="checkbox">Шампунь
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+                <label class="checkbox__label" for="checkbox">Телевизор
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+                <label class="checkbox__label" for="checkbox">Шампунь
+                  <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox"><span class="checkbox__square"></span>
+                  <script src="../../components/checkbox/checkbox.js"></script>
+                </label>
+          </div>
+        </div>
+        <div class="wrapper__rooms">
+          <h1 class="rooms__title">Номера, которые мы для вас подобрали</h1>
+          <div class="wrapper__best-room">  
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_1">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 888</span><span class="lux"> ЛЮКС</span></p>
+                          <p class="desc-text"> <span class="price_text">9 900₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i></div>
+                          <p class="desc-text"> <span class="price_text">145</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_2">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 840</span><span class="lux"></span></p>
+                          <p class="desc-text"> <span class="price_text">9 900₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star_border</i></div>
+                          <p class="desc-text"> <span class="price_text">65</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_3">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 980</span><span class="lux"> ЛЮКС</span></p>
+                          <p class="desc-text"> <span class="price_text">8 500₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star_border</i><i class="material-icons star">star_border</i></div>
+                          <p class="desc-text"> <span class="price_text">35</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_4">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 856</span><span class="lux"></span></p>
+                          <p class="desc-text"> <span class="price_text">7 300₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i></div>
+                          <p class="desc-text"> <span class="price_text">19</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_5">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 740</span><span class="lux"></span></p>
+                          <p class="desc-text"> <span class="price_text">6 000₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star_border</i></div>
+                          <p class="desc-text"> <span class="price_text">44</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_6">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 982</span><span class="lux"></span></p>
+                          <p class="desc-text"> <span class="price_text">5 800₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star_border</i><i class="material-icons star">star_border</i></div>
+                          <p class="desc-text"> <span class="price_text">56</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_7">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 678</span><span class="lux"></span></p>
+                          <p class="desc-text"> <span class="price_text">5 500₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i></div>
+                          <p class="desc-text"> <span class="price_text">45</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_8">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 450</span><span class="lux"></span></p>
+                          <p class="desc-text"> <span class="price_text">5 300₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star_border</i></div>
+                          <p class="desc-text"> <span class="price_text">39</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_9">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 350</span><span class="lux"></span></p>
+                          <p class="desc-text"> <span class="price_text">5 000₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star_border</i><i class="material-icons star">star_border</i></div>
+                          <p class="desc-text"> <span class="price_text">77</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_10">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 666</span><span class="lux"></span></p>
+                          <p class="desc-text"> <span class="price_text">5 000₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i></div>
+                          <p class="desc-text"> <span class="price_text">25</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_11">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 444</span><span class="lux"></span></p>
+                          <p class="desc-text"> <span class="price_text">5 000₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star_border</i><i class="material-icons star">star_border</i></div>
+                          <p class="desc-text"> <span class="price_text">15</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="Wrapper__first_room wrapper__room"><a href="../../pages/room-info/room-info.html">
+                    <div class="room__photo Photo_12">
+                      <div class="preview-photo"></div>
+                      <div class="next-photo"></div>
+                      <div class="all-photo"><span class="first-all-photo"></span><span class="second-all-photo"></span><span class="third-all-photo"></span><span class="fourth-all-photo"></span></div>
+                    </div>
+                    <div class="bottom-card">
+                      <div class="room__container">
+                        <div class="top-room"> 
+                          <p class="lux_text"><span class="room-number">№ 352</span><span class="lux"></span></p>
+                          <p class="desc-text"> <span class="price_text">5 000₽</span><span> в сутки</span></p>
+                        </div>
+                        <div class="bottom-room">  
+                          <div class="room-stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star_border</i><i class="material-icons star">star_border</i></div>
+                          <p class="desc-text"> <span class="price_text">55</span><span> Отзывов  </span></p>
+                        </div>
+                      </div>
+                    </div></a></div>
+          </div>
+          <div class="wrapper__page-switch">
+                <div class="page-switch">
+                  <div class="switch__page">
+                    <ul class="switch__ul">
+                      <li class="first-toggle">1</li>
+                      <li class="desc-text">2</li>
+                      <li class="desc-text">3</li>
+                      <li class="desc-text">...</li>
+                      <li class="desc-text">15</li>
+                      <li class="li__arrow">
+                        <div class="arrow-white">
+                          <div class="arrow-white__span"> </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="switch__info">
+                    <p>1 – 12 из 100+ вариантов аренды</p>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clr"></div>
+<footer class="footer">
+  <div class="wrapper">
+    <div class="container">
+      <div class="footer__top"> 
+        <div class="footer__info"><a class="footer__logo_a" href="../../pages/index/index.html">
+            <div class="footer__logo"><img src="../../components/header/img/Logo.svg"/></div></a>
+          <div class="footer__description">
+            <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+          </div>
+        </div>
+        <table class="footer__table">
+          <thead>
+            <tr>
+              <th><a href='#'>Навигация</a></th>
+              <th><a href='#'>О Нас</a></th>
+              <th><a href='#'>Служба поддержки</a></th>
+              <th><a href='#'>Подписка</a></th>
+            </tr>
+          </thead>
+          <tbody>   
+            <tr>
+              <td><a href='#'>О нас</a></td>
+              <td><a href='#'>О сервисе</a></td>
+              <td><a href='#'>Соглашения</a></td>
+              <td class="rowspan" rowspan="2"><a href='#'>Получайте специальные предложения и новости сервиса</a></td>
+            </tr>
+            <tr>
+              <td><a href='#'>Новости</a></td>
+              <td><a href='#'>Наша команда</a></td>
+              <td><a href='#'>Сообщества </a></td>
+            </tr>
+            <tr>
+              <td><a href='#'>Служба поддержки</a></td>
+              <td><a href='#'>Вакансии</a></td>
+              <td><a href='#'>Связь с нами</a></td>
+              <td class="form"> 
+                <input class="email" type="text" name="text" placeholder="Email" id="email"/><span> </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href='#'>Услуги</a></td>
+              <td><a href='#'>Инвесторы </a></td>
+              <td></td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="border">           
+      <div class="container">                                               
+        <div class="footer__bottom">
+          <div class="footer__copyright">
+            <p>Copyright © 2018 Toxin отель. Все права зачищены.</p>
+          </div><a class="footer__social" href="#"> 
+            <div class="tw"></div>
+            <div class="fb"></div>
+            <div class="inst"></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script src="selection.js"></script>
+    <script src="../../components/dropdown-guests/dropdown-guests.js"></script>
+  </body>
+</html>

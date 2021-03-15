@@ -1,0 +1,65 @@
+.about-room__reviews .heading {
+  margin-bottom: 21px;
+}
+
+.about-review-first-info {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: top;
+}
+
+.about-room__reviews-first {
+  margin-bottom: 22px;
+}
+
+.review-text {
+  display: flex;
+}
+
+.about-review-second,
+.about-review-first {
+  margin-bottom: 6px;
+}
+
+.review-like {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #BC9CFF;
+  display: flex;
+  flex: 0 0 40px;
+  margin-right: 17px;
+  position: relative;
+  top: 2px;
+  left: 1px;
+}
+.review-like::before {
+  content: "favorite";
+  font-family: "Material Icons";
+  position: absolute;
+  font-size: 10px;
+  color: #BC9CFF;
+  top: 4px;
+  left: 5px;
+}
+.review-like::after {
+  content: "12";
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  position: absolute;
+  color: #BC9CFF;
+  top: 3px;
+  left: 20px;
+}
+
+.review-unlike {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+}
+.review-unlike::before {
+  color: rgba(31, 32, 65, 0.25);
+}
+.review-unlike::after {
+  color: rgba(31, 32, 65, 0.25);
+  content: "2";
+}

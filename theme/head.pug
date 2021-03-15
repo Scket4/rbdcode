@@ -1,0 +1,11 @@
+mixin head(data)
+  meta(charset='utf-8')
+  link(href=data.styles rel='stylesheet')
+  link(href='../../components/air-datepickere/dist/css/datepicker.css' rel='stylesheet' type='text/css')
+  link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+  script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
+  script(src='../../components/air-datepickere/dist/js/datepicker.js')    
+  script(src=data.script)
+  script(src=data.script2)
+  meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0')
+  title=data.title

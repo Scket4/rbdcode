@@ -1,0 +1,67 @@
+doctype html
+html(lang='ru')
+  head
+    include ../../theme/head.pug
+    +head({styles: 'cards.css', script: '../../components/header/header.js', title: 'Карточки'})
+    link(rel="icon" href="../../theme/img/logo.png" type="image/x-icon")
+  body
+    include ../../components/arrive-departure/arrive-departure.pug
+    include ../../components/guests/guests.pug
+    include ../../components/login-button/button-blue.pug
+    include ../../components/guests-dropdown/guests-dropdown.pug
+    include ../../pages/room-info/order-panel/order-panel.pug
+    include ../../components/rooms/rooms.pug
+    .wrapper
+      .cards
+        img(src='../../theme/img/logo.png').logo
+        .search-panel
+          .index__panel
+            .panel-container
+              h1.title Найдём номера под ваши пожелания
+              +arrive-departure({ arrive: 'ДД.ММ.ГГГГ', departure: 'ДД.ММ.ГГГГ'})(class='panel__arrive-departure')
+              +guests({ placeholder: 'Сколько гостей', name: 'Гости' })(class='panel__guest')
+              +guests-dropdown({ first: 'Взрослые', firstnumber: '2', second: 'Дети', secondnumber: '1', third: 'Младенцы', thirdnumber: '0'})(class='index__guests-dropdown')
+              +blue-button({ link: '../room-selection/selection.html', text: 'Подобрать номер'})(class='panel__button')
+        .order-panel
+          +order-panel() 
+        .date
+          .datepicker-here(data-range='true')
+        .registration-panel
+          .regform
+            .regform__content
+              h1 Регистрация аккаунта
+              form
+                input(type='text' name='name' id='name' placeholder='Имя' class='regform-name')
+                input(type='text' name='surname' id='surname' placeholder='Фамилия' class='regform-surname')
+                label.regform__male.actived(for='male') Мужчина
+                input(type='radio' name='male' id='male' class='regform__checkbox')
+                label.regform__female(for='female') Женщина
+                input(type='radio' name='female' id='female' class='regform__checkbox')
+                label(for='birthday' class='label-birthday bold-text') Дата рождения
+                input(type='text' name='birthday' id='birthday' placeholder='ДД.ММ.ГГГГ' class='datepicker-here' )
+                label(class='label-user bold-text') Данные для входа в сервис
+                  input(type='email' name='email' id='email' placeholder='Email' class='regform-email')
+                  input(type='password' name='pass' id='pass' placeholder='Пароль' class='regform-password')
+                input(type='checkbox' name='spam' id='spam' class='regform-spam')
+                label(for='spam' class='regform-spam-label') Получать спецпредложения
+                .regform__button
+                  +blue-button({ link: '../room-info/room-info.html', text: 'Перейти к оплате'})(class='panel__button')
+                .regform__login
+                  p Уже есть аккаунт на Toxin
+                  a.index__login-button(href='../login/login.html') Войти    
+        .login-panel
+          .regform
+            .regform__content
+              h1 Войти
+              form
+                input(type='email' name='email' id='email' placeholder='Email' class='regform-email')
+                input(type='password' name='pass' id='pass' placeholder='Пароль' class='regform-password')
+                .regform__button
+                    +blue-button({ link: '../index/index.html', text: 'Войти'})(class='panel__button')
+                .regform__login
+                  p Нет аккаунта на Toxin?
+                  a.index__login-button(href='../registration/registration.html') Создать
+        .first-card
+          +room__block({ photo: 'Photo_1', number: '№ 888', lux: ' ЛЮКС', price: '9 900₽', stars: 'star', stars3: 'star', stars4: 'star', stars5: 'star', reviews: '145'})
+        .second-card
+          +room__block({ photo: 'Photo_2', number: '№ 840', lux: '', price: '9 900₽', stars: 'star', stars3: 'star', stars4: 'star', stars5: 'star_border', reviews: '65'})

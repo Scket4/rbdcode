@@ -1,0 +1,11 @@
+mixin reviews(data)
+  .reviews
+    .review__container
+      img(class='review-photo' src=data.link)
+      .review__author
+        p.text-style.text-style--bold=data.name
+        p.text-style=data.date
+      .review__text
+        .like-button(class !=attributes.class)
+        p.text-style=data.review
+ 

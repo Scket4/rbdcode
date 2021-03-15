@@ -1,0 +1,24 @@
+.footer-mobile {
+  background-color: white;
+  width: 768px;
+  height: 367px;
+  position: relative;
+}
+
+.footer-mobile__img {
+  position: absolute;
+  top: 120px;
+  left: 331px;
+}
+
+.footer-mobile__txt {
+  top: 180px;
+  left: 134px;
+  position: absolute;
+}
+
+.footer-mobile__social {
+  position: absolute;
+  top: 223px;
+  left: 328px;
+}

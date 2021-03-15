@@ -1,0 +1,16 @@
+mixin guests-dropdown( data )
+  .guests-dropdown(class !=attributes.class)
+    .guests-dropdown__container
+      table
+        tr
+          td=data.first
+          td.numeral=data.firstnumber
+        tr
+          td=data.second
+          td.numeral=data.secondnumber
+        tr
+          td=data.third
+          td.numeral=data.thirdnumber
+      button.clear Очистить
+      button.apply Применить
+ 

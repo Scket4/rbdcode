@@ -1,0 +1,12 @@
+mixin impression
+  .impression
+    h3.impression__title Впечатления от номера
+    .impression__flex-container
+      include wheel/wheel.pug
+        p.inside-text <span class='number'>260</span><br> <span class='votes'>Голосов</span>
+      .diagram-description
+        ul.list-text
+          li.list.first-list Великолепно
+          li.list.second-list Хорошо
+          li.list.third-list Удовлетворительно
+          li.list.fourth-list Разачарован 

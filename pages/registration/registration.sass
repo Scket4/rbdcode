@@ -1,0 +1,266 @@
+@import '../../components/login-button/button-blue.sass'
+@import '../../components/header/header.sass'
+@import '../../components/footer/footer.sass'
+@import '../../theme/fonts/fonts.css'
+@import '../../components/arrive-departure/arive-departure.sass'
+@import '../../theme/template.sass'
+
+.wrapper
+  max-width: 1440px
+  height: 100%
+  margin: 0 auto
+  box-shadow: 0 0 100px $dark-10
+  &__image
+    background-image: url('../registration/img/registration.png')
+    background-repeat: no-repeat
+    height: 700px
+    background-position: 0 -70px
+    position: relative
+
+
+.regform
+  position: relative
+  max-width: 380px
+  height: 646px
+  top: 30px
+  left: 36.86%
+  background: white
+  border: 1px solid $dark-10
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+  border-radius: 4px
+  &__content
+    max-width: 320px
+    margin: 0 auto
+    padding-top: 40px
+    padding-bottom: 30px
+    height: 100%
+  & h1
+    font-weight: bold
+    font-size: 24px
+    line-height: 30px
+    color: $dark-100
+    font-family: 'Quicksand', sans-serif
+    letter-spacing: 1.119px
+    margin-bottom: 10px
+  &__button
+    max-width: 320px
+    height: 44px
+    position: relative
+    margin-top: 25px
+  &__button span
+    width: 15px
+    height: 2px
+    position: absolute
+    display: block
+    top: 20px
+    left: 14px
+    background-color: #fff
+    transform: rotate(0deg)
+    z-index: 200px
+    &::after
+      content: ""
+      width: 9px
+      height: 2px
+      position: absolute
+      display: block
+      bottom: 4px
+      left: 6px
+      background-color: #fff
+      transform: rotate(45deg)
+    &::before
+      content: ""
+      width: 9px
+      height: 2px
+      position: absolute
+      display: block
+      top: 4px
+      left: 6px
+      background-color: #fff
+      transform: rotate(-45deg)
+
+  & .regform-name, & .regform-surname, & .datepicker-here,
+  & .regform-email, & .regform-password
+    width: 100%
+    height: 44px
+    border: 1px solid $dark-25
+    border-radius: 4px
+    font-size: 14px
+    line-height: 18px
+    padding: 8px 32px 8px 14px
+    font-family: 'Montserrat', sans-serif
+    margin-top: 10px
+    &::placeholder
+      color: $dark-25
+  & .datepicker-here, & .regform-email
+    margin-top: 5px
+  & .datepicker-here
+    margin-bottom: 18px
+  & .regform__checkbox,
+  & .regform-spam
+    margin-top: 10px
+    margin-bottom: 30px
+  & .regform-password
+    margin-bottom: 10px
+  & .regform-surname
+    margin-bottom: 10px
+
+
+.button
+  margin: 0
+  width: 100%
+  height: 44px
+  background: $purple-gradient
+  border-radius: 22px
+  border: none
+  color: white
+  font-weight: bold
+  font-size: 12px
+  line-height: 15px
+  text-align: center
+  text-transform: uppercase
+  position: relative
+  letter-spacing: 0.7px
+
+
+.label-birthday
+  display: block
+  margin-top: 25px
+
+.bold-text
+  font-weight: 900
+  font-size: 12px
+  line-height: 15px
+  text-transform: uppercase
+  color: $dark-100
+  font-family: 'Montserrat', sans-serif
+  position: relative
+
+.regform__login
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 30px
+
+.index__login-button
+  @include login-button(99px, 44px)
+
+
+
+
+.regform .regform__content
+.regform-spam-label
+  cursor: pointer
+  position: relative
+  transition: all 0.3s ease 0s
+  margin: 10px 0 20px 0
+  left: 50px
+  &::before
+    content: ''
+    width: 40px
+    height: 20px
+    border-radius: 10px
+    border: 1px solid $dark-25
+    position: absolute
+    left: -51px
+    top: -2px
+  &::after
+    content: ''
+    position: absolute
+    width: 12px
+    height: 12px
+    left: -45px
+    top: 3px
+    background: $dark-25
+    border-radius: 10px
+    transition: all 0.3s ease 0s
+
+.regform .regform__content .regform-spam-label.active::before
+  border: 1px solid $purple
+
+.regform .regform__content .regform-spam-label.active::after
+  left: -25px
+  background: $purple-gradient
+
+.regform .regform__content .regform-spam
+  display: none
+
+
+.regform .regform__content .regform__checkbox
+  display: none
+
+.regform .regform__content .regform__male,
+.regform .regform__content .regform__female
+  margin-left: 30px
+  position: relative
+  color: $dark-50
+  cursor: pointer
+  &::before
+    content: ''
+    width: 20px
+    height: 20px
+    border-radius: 10px
+    border: 1px solid $dark-25
+    position: absolute
+    top: -1.7px
+    left: -30px
+
+
+.regform .regform__content .regform__female
+  margin-left: 45px
+
+.regform .regform__content .regform__male.actived,
+.regform .regform__content .regform__female.actived
+  color: rgba(31, 32, 65, 0.75)
+  &::before
+    border: 1px solid $purple
+  &::after
+    content: ''
+    width: 12px
+    height: 12px
+    border-radius: 10px
+    background: $purple-gradient
+    position: absolute
+    top: 3px
+    left: -25px
+
+@media (max-width: 640px)
+  body .regform
+    width: 80%
+    height: auto
+    left: 10%
+    top: 10px
+    &__content
+      width: 90%
+    & h1
+      text-align: center
+
+@media (max-width: 350px)
+  body .regform-spam-label
+    left: 0
+    &::before
+      top: 25px
+      left: 0px
+    &::after
+      left: 25px
+      top: 30px
+  .regform-spam-label.active
+    &::after
+      left: 5px
+  body .regform__button
+    margin-top: 37px
+
+// NOTE: Строки ввода текста/даты
+.regform-input
+  width: 100%
+  height: 44px
+  border: 1px solid $dark-25
+  border-radius: 4px
+  font-size: 14px
+  line-height: 18px
+  padding: 8px 32px 8px 14px
+  font-family: 'Montserrat', sans-serif
+  outline: none
+  &:hover, &:focus
+    border: 1px solid $dark-50
+  &::placeholder
+    color: $dark-25

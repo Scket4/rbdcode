@@ -1,0 +1,40 @@
+doctype html
+html(lang='ru')
+  head
+    include ../../theme/head.pug
+    +head({styles: 'colors-types.css', script: '../../components/header/header.js', title: 'Цвета и текст'})
+  body
+    include colors/colors.pug
+    include types/types.pug
+    .wrapper
+      .colors-types
+        img(src='../../theme/img/logo.png').logo
+        .colors-block
+          +colors({ colors: 'dark-100', namepercent: 'Dark Shade 100%', hesh: '#1F2041'})
+          +colors({ colors: 'dark-75', namepercent: 'Dark Shade 75%', hesh: '#1F2041'})
+          +colors({ colors: 'dark-50', namepercent: 'Dark Shade 50%', hesh: '#1F2041'})
+          +colors({ colors: 'dark-25', namepercent: 'Dark Shade 25%', hesh: '#1F2041'})
+          +colors({ colors: 'dark-5', namepercent: 'Dark Shade 5%', hesh: '#1F2041'})
+          +colors({ colors: 'purple', namepercent: 'Purple', hesh: '#BC9CFF'})
+          +colors({ colors: 'green', namepercent: 'Green', hesh: '#6FCF97'})
+        .types
+          +types({hsize: 'size-24', h: 'H1', htext: 'This one is the sub-section or widget title'})
+          +types({hsize: 'size-19', h: 'H2', htext: 'Next one is the item title inside widgets'})
+          +types({hsize: 'size-12', h: 'H3', htext: 'This is a label or CTA text'})
+          +types({hsize: 'size-14', h: 'Body', htext: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
+          
+          
+          
+    //.titles__h1
+      .h1 H1
+      p.h1_p This one is the sub-section or widget title
+      .titles__h2
+      .h2 H2
+      p.h2_p Next one is the item title inside widgets
+      .titles__h3
+      .h3 H3
+      p.h3_p This is a label or CTA text
+      .titles__body
+      .body Body
+      .body_p This is the body text which is used for most of the design, like paragraphs, lists, etc.
+          
